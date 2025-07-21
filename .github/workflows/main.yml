@@ -27,7 +27,7 @@ jobs:
         
     - name: Run PIN updater
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.HUB_TOKEN }}
         PASTEBIN_API_KEY: ${{ secrets.PASTEBIN_API_KEY }}
         SHORTENER_API_KEY: ${{ secrets.SHORTENER_API_KEY }}
         TARGET_REPO: ${{ github.repository }}
