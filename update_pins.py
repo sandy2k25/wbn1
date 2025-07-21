@@ -10,7 +10,7 @@ import time
 
 class PinUpdater:
     def __init__(self):
-        self.github_token = os.environ.get('HUB_TOKEN')
+        self.github_token = os.environ.get('GH_TOKEN')
         self.pastebin_api_key = os.environ.get('PASTEBIN_API_KEY')
         self.shortener_api_key = os.environ.get('SHORTENER_API_KEY')
         self.target_repo = os.environ.get('TARGET_REPO', 'sandy2k25/wbn1')
@@ -23,7 +23,7 @@ class PinUpdater:
     def validate_environment(self):
         """Validate required environment variables."""
         required_vars = {
-            'GITHUB_TOKEN': self.github_token,
+            'GH_TOKEN': self.github_token,
             'PASTEBIN_API_KEY': self.pastebin_api_key,
             'SHORTENER_API_KEY': self.shortener_api_key
         }
@@ -38,3 +38,8 @@ class PinUpdater:
     
     def generate_pin(self):
         """Generate a random 4-digit PIN."""
+        pin = random.randint(1000, 9999)
+        print(f"🎲 Generated PIN: {pin}")
+        return str(pin)
+    
+    def create_pastebin_paste(self, pin_code):
