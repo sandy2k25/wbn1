@@ -34,8 +34,3 @@ class PinUpdater:
         self.github_api_base = 'https://api.github.com'
         
         # Validate required environment variables
-        self._validate_environment()
-    
-    def _validate_environment(self):
-        """Validate that all required environment variables are set."""
-        required_vars = {
