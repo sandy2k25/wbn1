@@ -19,7 +19,7 @@ class PinUpdaterHTML:
         self.github_api_base = "https://api.github.com"
         
         self.validate_environment()
-    
+
     def validate_environment(self):
         """Validate required environment variables."""
         required_vars = {
@@ -35,11 +35,11 @@ class PinUpdaterHTML:
             exit(1)
         
         print("✅ Environment variables validated successfully")
-    
+
     def generate_pin(self):
         """Generate a random 4-digit PIN."""
         pin = random.randint(1000, 9999)
         print(f"🎲 Generated PIN: {pin}")
         return str(pin)
-    
+
     def create_pastebin_paste(self, pin_code):
