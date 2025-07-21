@@ -27,12 +27,12 @@ jobs:
         
     - name: Run PIN updater
       env:
-        GITHUB_TOKEN: ${{ secrets.HUB_TOKEN }}
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
         PASTEBIN_API_KEY: ${{ secrets.PASTEBIN_API_KEY }}
         SHORTENER_API_KEY: ${{ secrets.SHORTENER_API_KEY }}
         TARGET_REPO: ${{ github.repository }}
         TARGET_FILE: 'index.html'
-      run: python update_pins.py
+      run: python update_pins_html.py
       
     - name: Log completion
       run: |
