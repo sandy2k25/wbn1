@@ -10,7 +10,7 @@ import time
 
 class PinUpdater:
     def __init__(self):
-        self.github_token = os.environ.get('GITHUB_TOKEN')
+        self.github_token = os.environ.get('HUB_TOKEN')
         self.pastebin_api_key = os.environ.get('PASTEBIN_API_KEY')
         self.shortener_api_key = os.environ.get('SHORTENER_API_KEY')
         self.target_repo = os.environ.get('TARGET_REPO', 'sandy2k25/wbn1')
