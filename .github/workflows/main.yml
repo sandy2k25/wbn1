@@ -34,4 +34,4 @@ jobs:
         TARGET_FILE: 'index.html'
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         TELEGRAM_ADMIN_CHAT_ID: ${{ secrets.TELEGRAM_ADMIN_CHAT_ID }}
-      run: python update_pins_final.py
+      run: python update_pins_clean.py
